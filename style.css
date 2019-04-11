@@ -1,0 +1,170 @@
+/*
+Theme Name: Kisetsucon
+Theme URI: https://kisetsucon.org/
+Author: Joe Oh
+Author URI: https://kisetsucon.org/
+Description: Custom theme for Kisetsucon website
+Version: 1.0.0
+License: GNU General Public License
+License URI: https://www.gnu.org/licenses/gpl.html
+Tags: one-column, two-columns, custom-menu, featured-images, microformats, sticky-post, threaded-comments, translation-ready
+Text Domain: kisetsucon
+*/
+
+a:hover {
+    transition: all 0.25s;
+}
+
+/* Page */
+.page-header {
+    height: 12rem;
+    line-height: 12rem;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    color: white;
+    display: flex;
+    
+    background-position: center center;
+    background-size: cover;
+}
+
+.page-header img {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    filter: brightness(85%);
+}
+
+.page-header h1 {
+    text-shadow: 0 2px 2px #0c3b3b;
+    font-size: 3.5rem;
+    margin: auto;
+}
+
+.page-content {
+    padding: 2rem 0;
+}
+
+/* Accordion */
+a.accordion-link {
+    color: black;
+}
+
+.accordion-header {
+    text-align: center;
+}
+
+/* Countdown */
+#countdown {
+    height: 9.15rem;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+div.countdown-container {
+    font-size: 1.1rem;
+    font-weight: 700;
+    line-height: 1.1;
+    text-shadow: 1px 1px #000000;
+    font-family: "Lato", sans-serif;
+    animation-delay: 1s;
+}
+
+#countdown span {
+    font-size: 3rem;
+}
+
+/* Carousel */
+/* Carousel base class */
+.carousel-caption {
+    z-index: 10;
+    left: 20%;
+}
+
+.carousel-item {
+    min-height: 35.5rem;
+    height: calc(75vh - 136px);
+    background-color: #777;
+}
+.carousel-item > img {
+    min-height: 100%;
+    height: auto;
+    filter: brightness(65%);
+}
+
+@media (min-width: 40em) {
+    /* Bump up size of carousel content */
+    .carousel-caption p {
+      margin-bottom: 1.25rem;
+      font-size: 1.25rem;
+      line-height: 1.4;
+    }
+}
+
+/* Header */
+#social-bar {
+    height: 40px;
+    background-color: #ec9d57;
+    text-align: right;
+    font-size: 1.6rem;
+}
+
+#social-bar a, #social-bar a:link {
+    color: white;
+    margin: 0 0.75rem;
+}
+
+#social-bar a:hover, #social-bar a:active {
+    color: gray;
+}
+
+.dropdown-item:active {
+    background-color: initial!important;
+    color: initial!important;
+}
+
+ul.dropdown-menu {
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    left: initial;
+    right: 0;
+}
+
+/* Footer */
+main {
+    min-height: calc(100vh - 224px);
+}
+
+footer {
+    width: 100%;
+    background-color: #1d2738;
+}
+
+/* Links */
+li > a {
+    font-size: 1.4rem;
+}
+
+li > a:hover {
+    color: #ec9d57!important;
+}
+
+.blank-link {
+    color: black;
+}
+
+.blank-link:hover {
+    color: black;
+    text-decoration: none;
+}
+
+/* Misc */
+.bottom-shadow {
+    box-shadow: 0 1px 4px #575A5A;
+}
