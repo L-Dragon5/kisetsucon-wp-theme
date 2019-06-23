@@ -46,7 +46,8 @@ function crb_attach_google_form_embed_meta() {
         ->where( 'post_type', '=', 'page' )
         ->show_on_template('page-templates/page_google-form-embed.php')
         ->add_fields(array(
-            Field::make( 'text', 'google_form_url', 'Google Form URL' ),
+            Field::make( 'text', 'google_form_link', 'Google Form Link' ),
+            Field::make( 'text', 'google_form_url', 'Google Form Embed URL' ),
             Field::make( 'rich_text', 'page_additional_info', 'Additional Information')
         ));
 }
