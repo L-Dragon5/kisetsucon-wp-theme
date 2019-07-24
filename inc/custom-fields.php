@@ -19,6 +19,24 @@ function crb_attach_home_meta() {
                 Field::make( 'text', 'button_text', 'Button Text' ),
             ))
         ));
+
+    Container::make( 'post_meta', __( 'Partners & Founders', 'crb' ) )
+        ->where( 'post_type', '=', 'page' )
+        ->where( 'post_id', '=', get_option( 'page_on_front' ) )
+        ->add_fields( array(
+            Field::make( 'complex', 'crb_partners', 'Partners' )
+            ->set_layout( 'tabbed-horizontal' )
+            ->add_fields( array(
+                Field::make( 'image', 'image', 'Image' ),
+                Field::make( 'text', 'name', 'Name' ),
+                Field::make( 'text', 'url', 'Partner URL' ),
+            )),
+            Field::make( 'complex', 'crb_founders', 'Founders' )
+            ->set_layout( 'tabbed-horizontal' )
+            ->add_fields( array(
+                Field::make( 'text', 'name', 'Name' ),
+            ))
+        ));
 }
 
 // About Page Meta

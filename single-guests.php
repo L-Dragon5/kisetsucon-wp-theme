@@ -17,12 +17,14 @@ $notable_roles = carbon_get_post_meta( get_the_ID(), 'notable_roles' );
                     <?php the_content(); ?>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-12 mt-3">
-                    <h3>Notable Roles </h3>
-                    <?php echo $notable_roles; ?>
+            <?php if(!empty($notable_roles)): ?>
+                <div class="row">
+                    <div class="col-sm-12 mt-3">
+                        <h3>Notable Roles </h3>
+                        <?php echo $notable_roles; ?>
+                    </div>
                 </div>
-            </div>
+            <?php endif; ?>
         </div>
     <?php endwhile; endif; ?>
 </section>

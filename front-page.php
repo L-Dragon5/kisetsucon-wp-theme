@@ -1,8 +1,11 @@
 <?php get_header(); ?>
 <?php
+$start_date = carbon_get_theme_option( 'crb_event_start' );
 $slides = carbon_get_post_meta( get_the_ID(), 'crb_slides' );
-if($slides):
+$partners = carbon_get_post_meta( get_the_ID(), 'crb_partners');
+$founders = carbon_get_post_meta( get_the_ID(), 'crb_founders');
 ?>
+<?php if($slides): ?>
 
 <div id="front-carousel" class="carousel slide" data-ride="carousel">
   <ol class="carousel-indicators">
@@ -39,10 +42,7 @@ if($slides):
 </div>
 <?php endif; ?>
 
-<?php
-$start_date = carbon_get_theme_option( 'crb_event_start' );
-if($start_date):
-?>
+<?php if($start_date): ?>
 <section class="text-light bg-dark">
   <h1 class="text-center pt-2"><?php echo date("l, F jS, Y", strtotime($start_date)); ?></h1>
 
@@ -84,6 +84,48 @@ var x = setInterval(function() {
   }
 }, 1000);
 </script>
+<?php endif; ?>
+
+<?php if($partners): ?>
+<section class="partners mt-3">
+  <div class="container">
+    <h2 class="text-center">Partners</h2>
+    <div class="row">
+      <?php foreach($partners as $partner): ?>
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3 text-center">
+          <a href="<?php echo $partner['url'] ?>" target="_blank">
+            <?php if(empty($partner['image'])): ?>
+              <?php echo $partner['name']; ?>
+            <?php else: ?>
+              <img src="<?php echo wp_get_attachment_image_src( $partner['image'], 'medium' )[0]; ?>" alt="<?php echo $partner['name']; ?>" />
+            <?php endif; ?>
+          </a>
+        </div>
+      <?php endforeach; ?>
+    </div>
+  </div>
+</section>
+<?php endif; ?>
+
+<?php if($founders): ?>
+<section class="founders mt-5">
+  <div class="container">
+    <h2 class="text-center">Founder Badges</h2>
+    <div class="row">
+      <?php foreach($founders as $founder): ?>
+        <div class="col-sm-6 col-md-4 col-lg-3 col-xl-2 mt-3 text-center">
+          <?php echo $founder['name']; ?>
+        </div>
+      <?php endforeach; ?>
+    </div>
+    <div class="row mt-5 mb-3">
+      <div class="col text-center">
+        <p>Become a Founder now!<br>Limited quantity and special perks only available for this year.</p>
+        <a class="btn btn-primary" href="/registration/attendee" target="_blank">Register Now!</a>
+      </div>
+    </div>
+  </div>
+</section>
 <?php endif; ?>
 
 <section id="content" role="main">
