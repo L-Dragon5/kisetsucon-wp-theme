@@ -1,14 +1,9 @@
 <?php get_header(); ?>
-<section id="content" role="main">
-<article id="post-0" class="post not-found">
-<header class="header">
-<h1 class="entry-title"><?php _e( 'Not Found', 'blankslate' ); ?></h1>
-</header>
-<section class="entry-content">
-<p><?php _e( 'Nothing found for the requested page. Try a search instead?', 'blankslate' ); ?></p>
-<?php get_search_form(); ?>
+<section id="_404" role="main">
+  <article>
+    <h1>Oops! We couldn't find what you were looking for</h1>
+    <p>Check out the links in the menu to find what you need.</p>
+    <p>Or <a href="/">click here</a> to go back home.</p>
+  </article>
 </section>
-</article>
-</section>
-<?php get_sidebar(); ?>
 <?php get_footer(); ?>

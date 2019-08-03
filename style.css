@@ -15,7 +15,9 @@ a:hover {
     transition: all 0.25s;
 }
 
-/* Page */
+/********
+ * Page *
+ ********/
 .page-header {
     height: 12rem;
     line-height: 12rem;
@@ -49,7 +51,9 @@ a:hover {
     padding: 2rem 0;
 }
 
-/* Accordion */
+/*************
+ * Accordion *
+ *************/
 a.accordion-link {
     color: black;
 }
@@ -58,7 +62,9 @@ a.accordion-link {
     text-align: center;
 }
 
-/* Countdown */
+/*************
+ * Countdown *
+ *************/
 #countdown {
     height: 9.15rem;
     padding: 2rem;
@@ -81,8 +87,9 @@ div.countdown-container {
     font-size: 3rem;
 }
 
-/* Carousel */
-/* Carousel base class */
+/************
+ * Carousel *
+ ************/
 .carousel-caption {
     z-index: 10;
     left: 20%;
@@ -108,10 +115,12 @@ div.countdown-container {
     }
 }
 
-/* Header */
+/**********
+ * Header *
+ **********/
 #social-bar {
     height: 40px;
-    background-color: #ec9d57;
+    background-color: #B55E17;
     text-align: right;
     font-size: 1.6rem;
 }
@@ -125,6 +134,13 @@ div.countdown-container {
     color: gray;
 }
 
+#registration-bar {
+    height: 38px;
+    background-color: #007bff;
+    text-align: right;
+    font-size: 1rem;
+}
+
 .dropdown-item:active {
     background-color: initial!important;
     color: initial!important;
@@ -136,9 +152,18 @@ ul.dropdown-menu {
     right: 0;
 }
 
-/* Footer */
+/**********
+ * Navbar *
+ **********/
+ .navbar-light .navbar-nav a.nav-link {
+    color: rgba(0, 0, 0, .75);
+ }
+
+/**********
+ * Footer *
+ **********/
 main {
-    min-height: calc(100vh - 224px);
+    min-height: calc(100vh - 262px);
 }
 
 footer {
@@ -146,7 +171,9 @@ footer {
     background-color: #1d2738;
 }
 
-/* Links */
+/*********
+ * Links *
+ *********/
 li > a {
     font-size: 1.4rem;
 }
@@ -164,7 +191,20 @@ li > a:hover {
     text-decoration: none;
 }
 
-/* Misc */
+/********
+ * Misc *
+ ********/
 .bottom-shadow {
     box-shadow: 0 1px 4px #575A5A;
+}
+
+/*******
+ * 404 *
+ *******/
+#_404 > article {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
 }

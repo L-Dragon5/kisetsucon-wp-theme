@@ -38,6 +38,13 @@
 		if(!empty($info_email)) { echo '<a href="mailto:' . $info_email . '"><i class="far fa-envelope"></i></a>'; }
 		?>
 	</div>
+
+	<div id="registration-bar">
+		<a href="/registration/attendee" style="color: white; font-weight: bold;" class="btn btn-link col">
+			Click here to Register Now!
+		</a>
+	</div>
+
 	<header class="sticky-top bottom-shadow">
 		<nav class="navbar navbar-expand-md bg-light navbar-light">
 			<a class="navbar-brand ml-md-5" href="<?php echo home_url(); ?>"><img src="<?php echo bloginfo('template_url') . '/assets/img/logo.png'; ?>" /></a>
