@@ -92,12 +92,12 @@ var x = setInterval(function() {
     <h2 class="text-center">Partners</h2>
     <div class="row">
       <?php foreach($partners as $partner): ?>
-        <div class="col-sm-6 col-md-4 col-lg-3 mt-3 text-center">
+        <div class="col-sm-6 col-md-4 col-lg-3 mt-3 text-center d-flex align-items-center justify-content-center">
           <a href="<?php echo $partner['url'] ?>" target="_blank">
             <?php if(empty($partner['image'])): ?>
               <?php echo $partner['name']; ?>
             <?php else: ?>
-              <img src="<?php echo wp_get_attachment_image_src( $partner['image'], 'medium' )[0]; ?>" alt="<?php echo $partner['name']; ?>" />
+              <img class="img-fluid" src="<?php echo wp_get_attachment_image_src( $partner['image'], 'medium' )[0]; ?>" alt="<?php echo $partner['name']; ?>" />
             <?php endif; ?>
           </a>
         </div>
